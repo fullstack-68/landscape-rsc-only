@@ -19,8 +19,8 @@ export const FormInput: FC<Props> = async ({ message, mode, curId }) => {
       console.dir(err);
       redirect(`/?message=${err ?? "Unknown error"}&curId=&mode=ADD`);
     }
-    redirect("/?message=&curId=&mode=ADD"); // No refresh.
-    // revalidatePath("/")  // I need to change the URL (i.e. insert search params), therefore, I cannot use revalidatePath.
+    redirect("/?message=&curId=&mode=ADD"); // Full refresh in Next 15, but not Next 14.
+    // revalidatePath("/"); // I need to change the URL (i.e. insert search params), therefore, I cannot use revalidatePath.
   }
 
   async function actionUpdateTodo(formData: FormData) {
