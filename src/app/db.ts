@@ -1,4 +1,4 @@
-const DB_LATENCY = 500; // ms
+const DB_LATENCY = 1000; // ms
 
 let todos = [
   {
